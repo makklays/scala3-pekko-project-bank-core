@@ -10,8 +10,8 @@ The project is designed following the principles of **Domain-Driven Design (DDD)
 In modern FinTech platforms, key requirements include transaction isolation, strict balance auditing, and resilience to failures. This project simulates a bank's core ledger, handling highly concurrent transfer requests between thousands of virtual accounts per second without operating system thread blocking (Lock-free / Non-blocking).
 
 <p align="left">
-  <img src="doc/images/bank1.png" width="400" alt="Sol y Pago 1" />
-  <img src="doc/images/bank2.png" width="400" alt="Sol y Pago 2" />
+  <img src="doc/images/bank6.png" width="400" alt="Bank Core 1" />
+  <img src="doc/images/bank7.png" width="400" alt="Bank Core 2" />
 </p>
 
 ---
@@ -42,7 +42,7 @@ The project is strictly separated into three layers according to Hexagonal Archi
 ## 📁 Project Directory Structure (DDD)
 
 ```text
-src/main/scala/com/banking/
+src/main/scala/com/techmatrix18/
 ├── Main.scala                     # Entry point (initializes Pekko ActorSystem)
 ├── domain/                        # 1. PURE DOMAIN LAYER (0% frameworks)
 │   ├── account/                   # Account entities & Value Objects (Money, AccountState)
