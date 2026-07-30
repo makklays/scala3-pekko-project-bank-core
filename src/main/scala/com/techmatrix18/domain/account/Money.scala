@@ -11,7 +11,7 @@ import java.math.RoundingMode
  * @since 28.07.2026
  */
 
-// 1. Строгий тип для Валюты с использованием Opaque Types в Scala 3
+// Строгий тип для Валюты с использованием Opaque Types в Scala 3
 opaque type Currency <: String = String
 object Currency:
   val EUR: Currency = "EUR"
@@ -21,7 +21,7 @@ object Currency:
     if (value.toUpperCase == "EUR") Right(value.toUpperCase)
     else Left(s"Unsupported currency: $value. Only EUR is allowed for Bizum/Revolut-ES operations.")
 
-// 2. Объект-значение (Value Object) для представления денег
+// Объект-значение (Value Object) для представления денег
 case class Money private (amount: BigDecimal, currency: Currency):
 
   // Бизнес-логика: Сложение денег с проверкой валюты
