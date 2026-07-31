@@ -12,8 +12,8 @@ CREATE TABLE IF NOT EXISTS transactions (
     status VARCHAR(20) NOT NULL, -- PENDING, COMPLETED, FAILED, REVERSED
     description VARCHAR(255),
 
-    created_at TIMESTAMP WITH TIME ZONE NOT NULL,
-    updated_at TIMESTAMP WITH TIME ZONE NOT NULL,
+    created_at TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT NOW(),
+    updated_at TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT NOW(),
 
     -- Внешние ключи для обеспечения целостности данных на уровне БД
     CONSTRAINT fk_sender_account FOREIGN KEY (sender_account_id) REFERENCES accounts(id) ON DELETE RESTRICT,
